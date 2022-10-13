@@ -4,7 +4,7 @@ specifiers:
   axios: ^1.0.0
   nuxt: 3.0.0-rc.11
   openapi-typescript: ^5.4.1
-  vite-plugin-open-client: 0.0.3
+  vite-plugin-open-client: 0.0.5
 
 dependencies:
   axios: 1.0.0
@@ -12,7 +12,7 @@ dependencies:
 
 devDependencies:
   nuxt: 3.0.0-rc.11
-  vite-plugin-open-client: 0.0.3
+  vite-plugin-open-client: 0.0.5
 
 packages:
 
@@ -4330,8 +4330,8 @@ packages:
       vscode-uri: 3.0.6
     dev: true
 
-  /vite-plugin-open-client/0.0.3:
-    resolution: {integrity: sha512-CkqY2ck9I88XCqzXEYuSZUIvI+yxb9u7iidZ2oJNrv+X2lvZt2r2x3bchB8RsavgjPFuS/dY1fAM4VzziW1Ovg==}
+  /vite-plugin-open-client/0.0.5:
+    resolution: {integrity: sha512-fjLlrA0z+tMImnfkOt9U0hpnpuAiSaLzzht0NJDFim181UiR+CAmCT43Tc6BYvVZt1kAOyTN0EZQKtFo3t0q/w==}
     peerDependencies:
       vite: '>2.0.0-0'
     dependencies:

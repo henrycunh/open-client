@@ -1,13 +1,18 @@
 <script lang="ts" setup>
-import { defineClient, definitions } from 'api:petstore'
+import { defineClient } from 'api:petstore'
 
-const client = defineClient()
+const client = defineClient({
+  baseURL: 'https://petstore.swagger.io/v2',
+})
 
-// client('/pet/{petId}', 'get')({ path: { petId: 1 } })
+const { data: pets } = await client('/pet/findByStatus', 'get')({ 
+  query: { status: ['available', 'sold', 'pending'] } 
+})
+
 </script>
 
 <template>
   <div>
-    {{ client }}
+    {{ pets }}
   </div>
 </template>

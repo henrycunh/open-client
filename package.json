@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-open-client",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "packageManager": "pnpm@7.12.0",
   "description": "Provides a HTTP client based on a OpenAPI specification",
   "author": "Henrique Cunha",

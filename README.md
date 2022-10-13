@@ -40,7 +40,7 @@ const createPet = client('/pet', 'post')
 console.log(
   await getPetById({ 
     path: { petId: 1 } 
-    })
+  })
 )
 
 // You can borrow type definitions from the specification

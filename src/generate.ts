@@ -36,8 +36,6 @@ export const generateTypes = async (url: string, moduleName: string) => {
 
     // Generate the `open-client.d.ts` file
     const types = [
-        '/// <reference types="axios" />',
-        '/// <reference types="vite/client" />',
         '',
         output,
         '',
@@ -51,12 +49,16 @@ export const generateTypes = async (url: string, moduleName: string) => {
             .replace(/(const[^]*)/, [
                 `declare module 'api:${moduleName}' {`,
                 '',
+                `type CreateAxiosDefaults = import('axios').CreateAxiosDefaults`,
+                `type AxiosRequestConfig = import('axios').AxiosRequestConfig`,
+                `type AxiosResponse = import('axios').AxiosResponse`,
                 '$1',
                 '',
                 APISchemaType,
                 '',
                 '}',
             ].join('\n'))
+            .replace(/CreateAxiosDefaults\<any\>/g, 'CreateAxiosDefaults')
     ].join('\n')
 
     // Write the types to the `open-client.d.ts` file
