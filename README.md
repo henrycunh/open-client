@@ -6,7 +6,12 @@
 
 &nbsp;
 
-### Usage
+### install
+```
+pnpm i -D vite-plugin-open-client
+```
+
+### use it
 
 ##### `vite.config.ts`
 ```ts
