@@ -1,0 +1,45 @@
+{
+  "name": "vite-plugin-open-client",
+  "version": "0.0.4",
+  "packageManager": "pnpm@7.12.0",
+  "description": "Provides a HTTP client based on a OpenAPI specification",
+  "author": "Henrique Cunha",
+  "license": "MIT",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "BUILD_TEMPLATES=1 unbuild && unbuild && cp -r src/templates dist/templates"
+  },
+  "peerDependencies": {
+    "vite": ">2.0.0-0"
+  },
+  "dependencies": {
+    "axios": "^1.0.0",
+    "kleur-template": "^0.0.3",
+    "openapi-typescript": "^5.4.1",
+    "unplugin": "^0.9.6"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.20",
+    "typescript": "^4.0.0",
+    "unbuild": "^0.8.11",
+    "vite": "latest",
+    "vite-plugin-open-client": "^0.0.2"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin"
+  ]
+}
